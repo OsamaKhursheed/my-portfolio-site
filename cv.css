@@ -71,6 +71,7 @@ body {
     font-size: 15px;
     margin: 0px;
     padding: 10px;
+    padding-bottom: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -171,6 +172,8 @@ hr {
     font-size: 10px;
     font-family: sans-serif;
     padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     text-align: justify;
 }
 
@@ -380,7 +383,7 @@ a {
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     margin: 0px;
-    padding: 10px;
+    padding-top: 10px;
     text-align: justify;
 }
 .objective-div p {
@@ -388,6 +391,8 @@ a {
     font-family: sans-serif;
     line-height: 1.5;
     text-align: justify;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .objective-div:hover {
@@ -546,6 +551,11 @@ a {
         font-size: 10px;
         margin: 5px 10%;
     }
+    .certification-info p, a{
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 @media (max-width: 420px) {
     .large-button{
@@ -571,8 +581,8 @@ a {
         display:none;
     }
     .image-div {
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
     }
     .small-div2 {
         width: 100%;
@@ -607,8 +617,8 @@ a {
         align-items: center;
     }
     .small-div2 .linkedin-barcode {
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
     }
     .small-div1 .linkedin-div{
         display: none;
