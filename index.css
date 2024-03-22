@@ -40,12 +40,12 @@ li{
     margin-bottom: 100px;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('landing-pics/bg3.webp');
+    background-color: black;
 }
 
 .portfolio-container {
     width: 100%;
-    height: 250px;
+    height: auto;
     display: flex;   
     justify-content: space-around;
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ li{
     justify-content: center;
     align-items: flex-start;
     width: 65%;
-    height: 100%;
+    height: auto;
     color: white;
     padding: 10px;
     margin-left: 0px;
@@ -90,91 +90,37 @@ li{
     color: greenyellow;
 }
 
-.portfolio-text .auto-des {
-    font-size: 10px;
-    font-family: sans-serif;
-    text-align: justify;
-}
-
-.description{
-    padding-right: 0px;
-}
 .portfolio-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75%;
-    width: 35%;
+    height: 100%;
+    width: 30%;
     padding: 5px;
+    padding-bottom: 0px;
 }
 
 .ok {
     width: 100%;
     height: 100%;
-    border: 5px solid white; 
-    box-sizing: border-box;
     overflow: hidden;
     clip-path: inset(2%);
-    background: #1b2326;
 }
 
-
-.ok1 {
-    width: 45%;
-    height: 75%;
-    position: relative;
-    box-shadow: 16px 14px 20px black;
-}
-
-.ok1::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 0px solid transparent;
-    background: linear-gradient(90deg, #ff53bb, #1b2326 30%, #00f8d3 50%, #1b2326 70%, #ff53bb); 
-    background-size: 200% 100%;
-    animation: pulse 3s linear infinite alternate;
-    filter: blur(5px);
-}
-
-@keyframes pulse {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
 
 .portfolio-image img {
     width: 100%;
     height: 100%;
 }
 @media (max-width: 1130px) {
-    .main-container{
-        height: 350px;
-    }  
     .portfolio-text {
         height: auto;
         color: white;
         margin: 0px;
         overflow: hidden;
     }
-    .ok1{
-        width: 65%;
-        height: 80%;
-    }
 }
 
-@media (max-width: 740px) {
-    .ok1{
-        width: 75%;
-        height: 90%;
-    }
-}
 
 @media (max-width: 650px) {
     .description .auto-des{
@@ -256,12 +202,13 @@ li{
 
 .skill-content {
     height: auto;
-    width: 100%;
+    width: 95%;
     padding: 0px;
+    margin: 0px auto;
     padding-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .sk-head {
@@ -349,6 +296,7 @@ li{
     background: linear-gradient(to top, #dfe9f3 0%, white 100%);
     transition: transform 0.3s, box-shadow 0.3s;
     height: auto;
+    width: 100%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 10px 10px 15px rgba(0, 0, 0, 0.5);
     padding: 0px;
     padding-left: 10px;
@@ -525,22 +473,15 @@ label i {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    width: 100%;
 }
 
 .footer-links {
     display: flex;
+    font-size: 15px;
     align-items: center;
 }
 
-.footer-content a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#f-p{
+.footer-links a {
     margin: 0 15px;
     color: #fff;
     text-decoration: none;
@@ -559,6 +500,7 @@ label i {
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
@@ -566,20 +508,6 @@ label i {
 
 .social-icons a:hover {
     color: #0077B5;
-}
-
-@media (max-width: 1030px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 1px;
-    }
-    .social-icons {
-        margin-top: 10px;   
-    }
-    .footer-links{
-        font-size: 70%;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -595,7 +523,6 @@ label i {
         font-size: 70%;
     }
 }
-
 @media (max-width: 1100px) {
     .navbar {
         height: auto;
@@ -667,5 +594,6 @@ label i {
     .skill-content {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
 }

@@ -4,6 +4,34 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h1{
+    font-size: clamp(24px, 2.5vw, 40rem); 
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p{
+    font-size: clamp(18px, 1.3vw, 20rem); 
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+h3{
+    font-size: clamp(20px, 1.7vw, 25rem); 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    font-size: clamp(24px, 2vw, 30rem); 
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+button{
+    font-size: clamp(16px, 1.3vw, 20rem); 
+}
+
+
 .navbar {
     background-color: transparent;
     padding: 0px;
@@ -12,23 +40,23 @@ body {
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
-    height: 75px;
+    height: auto;
 }
 
 .nav-heading {
     width: 30%;
     background-color:transparent;
-    color: white;
+    color: rgb(116, 187, 71);
     height: auto;
     display: flex;
     align-items: center;
 }
 
 .nav-heading h1 {
-    font-size: 15px;
     margin: 0;
     padding: 10px;
-    padding-left: 50px;
+    padding-bottom: 0px;
+    font-size: clamp(12px, 1.7vw, 20rem); 
 }
 
 .nav-btn {
@@ -44,22 +72,23 @@ body {
     width: 100%;
     height: 100%;
     padding: 4px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 10px;
-    border: 1px solid greenyellow;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    font-size: clamp(10px, 1.5vw, 20rem); 
+    padding-right: 5px;
+    border-bottom: 2px solid white;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
     color: white;
-    border-radius: 10px;
     background-color: transparent;
-    margin: 0 15px;
     transition: color 0.3s;
 }
 
 .large-button:hover {
-    color: white;
-    background-color: green;
+    color: rgb(116, 187, 71);
+    border-color: rgb(116, 187, 71);
 }
-
 
 #particles-js {
     position: absolute;
@@ -97,6 +126,7 @@ body {
     height: 300px;
     width: 25%;
     margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: 20px;
     background-image: url('portfolio_pic.webp');
     background-size: cover;
@@ -119,8 +149,23 @@ body {
     }
 }
 
+@media (min-width: 1250px){
+    .portfolio-image{
+        height: 400px;
+    }
+}
+@media (min-width: 1800px){
+    .portfolio-image{
+        height: 450px;
+    }
+}
+@media (min-width: 2100px){
+    .portfolio-image{
+        height: 500px;
+    }
+}
 .portfolio-text {
-    width: 100%;
+    width: 97%;
     height: auto;
     color: white;
     padding: 0px;
@@ -131,17 +176,8 @@ body {
     text-align: center;
     font-family: sans-serif;
 }
-.portfolio-text h1{
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
-}
 .auto-type{
-    font-size: 15px;
-    color: greenyellow;
-}
-.portfolio-text h4{
-    font-size: 10px;
-    text-align: justify;
+    color: rgb(116, 187, 71);
 }
 
 .sub-container{
@@ -152,13 +188,12 @@ body {
     padding-right: 7px;
 }
 .sub-container h1{
-    font-size: 15px;
-    text-align: center;
     padding: 10px;
 }
 
 .about-con {
-    width: 100%;
+    width: 98%;
+    margin: 0 auto;
     display: flex;
     height: auto;
     padding: 10px;
@@ -171,9 +206,9 @@ body {
 }
 
 .about-img {
-    width: 250px;
-    height: 250px;
+    height: auto;
     background-size: cover;
+    background-position: center;
     margin: auto;
 }
 
@@ -190,18 +225,14 @@ body {
     padding-bottom: 3px;
     padding-top: 3px;
     padding-left: 0px;
-    font-size: 10px;
-    text-align: justify;
-    font-family: sans-serif;
     margin-bottom: 0px;
 }
 .about-item h3{
     padding: 5px;
     padding-left: 0px;
-    font-size: 10px;
     margin: 0px;
-    text-align: justify;
 }
+
 .about-content{
     display: flex;
     margin: 0 auto;   
@@ -209,7 +240,8 @@ body {
 
 
 .skill-con {
-    width: 100%;
+    width: 98%;
+    margin: 0 auto;
     height: auto;
     display: flex;
     padding: 10px;
@@ -230,12 +262,9 @@ body {
     padding-bottom: 25px;
     margin: 0 auto;
 }
-.skill-1 h1{
-    font-size: 15px;
+.skill-1 h2,.skill-2 h2{
     padding-bottom: 22px;
-}
-.heading {
-    font-size: 10px;
+    text-align: center;
 }
 .skill-2 {
     width: 49%;
@@ -244,10 +273,6 @@ body {
     color: black;
     display: block;
     margin: 0 auto;
-}
-.skill-2 h1{
-    font-size: 15px;
-    padding-bottom: 22px;
 }
 
 .progress-charts {
@@ -291,15 +316,14 @@ body {
     padding-top: 200px;
     margin-left: 0px;
     margin-right: 0px;
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
     height: auto;
     padding-bottom: 50px;
-    padding-left: 7px;
-    padding-right: 7px;
-    font-family: 'Times New Roman', Times, serif;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .sk-head h1{
-    font-size: 15px;
     padding: 10px;
 }
 
@@ -308,66 +332,57 @@ body {
     flex-wrap: wrap;
     height: auto;
     width: 100%;
+    margin: 0px auto;
     text-align: left;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .education-item {
     flex: 1;
     height: 500px;
     flex-wrap: wrap;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 10px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 5px 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     overflow: hidden;
-    margin: 0 auto;
-    margin-right: 10px;
+    margin: 0px auto;
+    margin-right: 15px;
+    text-align: left;
+    justify-content: space-between;
 }
 
 .education-item .custom-icon {
     font-size: 2rem;
     transition: font-size 0.3s;
 }
-
-.education-item h1{
-    font-size: 15px;
-}
-.education-item h4 {
+.education-item p,h2 {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 10px;
-}
-
-.education-item h5{
-    font-size: 10px;
-    margin-top: 10px;
-    font-family: sans-serif;
-    text-align: justify;            
 }
 
 .edu-but {
-    width: 70px;
-    height: 30px;
+    width: 20%;
+    height: auto;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: clamp(14px, 1.5vw, 25rem); 
     border: 0px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .education-item:hover {
-    background: linear-gradient(248.6deg, rgb(254, 99, 132) 0%, rgb(49, 52, 56) 99.8%);
+    background: rgb(116, 187, 71);
     color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
     transform: scale(1.05);
 }
 
 .education-item:hover .edu-but{
-    background: linear-gradient(248.6deg, rgb(254, 99, 132) 0%, rgb(49, 52, 56) 99.8%);
+    background: rgb(116, 187, 71);
     color: white;
     transform: scale(1.05);
 }
@@ -375,23 +390,23 @@ body {
 .course-main{
     height: auto;
     width: 100%;
+    margin: 0px auto;
     margin-top: 150px;
     text-align: center;
     padding-left: 7px;
     padding-right: 7px;
     
 }
-.course-main h1{
-    font-size: 15px;
-}
 .course-sub{
     height: auto;
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
     padding: 0px;
 }
 
 .course-item {
     width: 100%;
+    margin: 0px auto;
     height: auto;
     margin-left: 0px;
     border-radius: 10px;
@@ -399,8 +414,8 @@ body {
 }
 
 .coursera-img {
-    height: 200px;
-    width: 225px;
+    height: 250px;
+    width: 300px;
     margin: 0 auto;
     margin-bottom: 0px;
     background-size: cover;
@@ -423,20 +438,13 @@ body {
     color: #000;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
-.coursera-item h1{
-    font-family: 'Times New Roman', Times, serif;
-}
-.coursera-item h5{
-    font-size: 10px;
-    font-family: sans-serif;
-}
 .coursera-item:hover{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 .c-img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: auto;
     background-size: cover;
     background-color: white;
@@ -452,17 +460,11 @@ body {
     padding: 10px;
 }
 
-.c-txt h5{
-    font-size: 10px;
-    font-family: sans-serif;
-    text-align: justify;
-}
-
 ul{
     text-align: justify;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: clamp(18px, 1.3vw, 20rem); 
     padding-left: 15px;
     font-family: sans-serif;
 }
@@ -471,11 +473,10 @@ ul{
     width: auto;
     height: auto;
     padding: 10px;
-    font-size: 10px;
     border: 0px;
     border-radius: 10px;
     justify-content: center;
-    background-color:green;
+    background-color:rgb(116, 187, 71);
     align-items: center;
     margin: 0 auto;
     margin-top: 10px;
@@ -486,12 +487,13 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 .c-btn:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
     background-color: white;
     text-decoration: none;
-    color: green;
+    color: rgb(116, 187, 71);
 }
 
 .cu-box{
@@ -503,14 +505,10 @@ ul{
 .cu-box h1{
     padding: 10px;
 }
-@media screen and (max-width: 1100px) {
-    .course-item {
-        width: 100%;
-    }
 
+@media screen and (max-width: 1100px) {
     .c-txt{
         width: 100%;
-        font-size: 100%;
     }
 
     .c-btn{
@@ -528,8 +526,9 @@ ul{
 
 
 .project-main{
-    width: 100%;
+    width: 96%;
     height: auto;
+    margin: 0px auto;
     margin-top: 150px;
 }
 .project-main h1{
@@ -537,9 +536,9 @@ ul{
 }
 
 .project-sub{
-    width: 75%;
+    width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    margin: 50px auto;
     padding: 10px;
     overflow: hidden;
     border-radius: 25px;
@@ -550,24 +549,9 @@ ul{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
-.project-sub2{
-    width: 75%;
-    margin-left: 27%;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 50px;
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 10px 10px 15px rgba(0, 0, 0, 0.5);
-}
-
-.project-sub2:hover{
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
-}
-
 .project-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     margin-bottom: 0px;
     background-size: cover;
@@ -583,24 +567,17 @@ ul{
     width: 100%;
     height: auto;
     color: black;
+    margin: 0 auto;
 }
 
-.project-item h4{
+.project-item p{
     margin-top: 5px;
-    font-size: 10px;
-    text-align: justify;
-    font-family: sans-serif;
 }
-.project-item h1{
-    font-size: 15px;
-    margin-bottom: 0px;
-}
-
 
 .project-badge {
     background-color: #0074d9;
     color: white;
-    padding: 5px 25px;
+    padding: 7px 25px;
     border-radius: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -609,21 +586,10 @@ ul{
 }
 
 .project-timeline {
-    font-size: 10px;
     font-family: sans-serif;
 }
 
 @media screen and (max-width: 1100px) {
-    .project-sub {
-        width: 80%;
-        margin-right: 1%;
-        overflow: hidden; 
-    }
-    .project-sub2 {
-        width: 80%;
-        margin-left: 19%;
-        overflow: hidden; 
-    }
     .project-badge{
         margin-bottom: 10px;
     }
@@ -631,20 +597,17 @@ ul{
 
 .resume-main{
     height: auto;
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
     color: black;
     text-align: center;
     padding-top: 200px;
 }
-.resume-main h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
-    margin-bottom: 0px;
-}
 .resume-sub{
-    height: 320px;
-    width: 100%;
+    height: auto;
+    width: 99%;
     display: flex;
+    margin: 0px auto;
     border-radius: 25px;
     margin-top: 50px;
     overflow: hidden;
@@ -659,22 +622,21 @@ ul{
     height: 100%;
     width: 60%;
     justify-content:center;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 20px;
     padding-bottom: 10px;
 }
 
 .resume-img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     margin: auto;
 }
 
-.resume-txt h4{
-    text-align: justify;
-    font-size: 10px;
-    font-family: sans-serif;
+.resume-txt p{
     padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .resume-btn {
@@ -692,18 +654,17 @@ ul{
     width: auto;
     height: auto;
     padding: 10px;
-    font-size: 10px;
     border: 0px;
     margin: 10px;
     border-radius: 10px;
-    background-color: green;
+    background-color: rgb(116, 187, 71);
     color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .r-btn:hover{
     background-color: white;
-    color: green;
+    color: rgb(116, 187, 71);
 }
 
 
@@ -711,9 +672,9 @@ ul{
     width: 75%;
     height: auto;
     padding: 10px;
-    font-size: 10px;
     border-radius: 10px;
-    background-color: green;
+    border:0px;
+    background-color: rgb(116, 187, 71);
     margin: 15px;    
     color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
@@ -721,12 +682,13 @@ ul{
 
 .l-btn:hover{
     background-color: white;
-    color: green;
+    color: rgb(116, 187, 71);
 }
 
 .contact-main{
     height: auto;
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
     color: black;
     padding: 3px;
     padding-top: 25px;
@@ -755,7 +717,6 @@ ul{
     text-align: left;
 }
 .contact-txt h1{
-    font-size: 15px;
     padding: 10px;
 }
 .contact-img{
@@ -764,11 +725,8 @@ ul{
     margin: 0 auto;
 }
 
-.contact-txt h5{
-    font-size: 10px;
+.contact-txt p{
     padding: 10px;
-    font-family: sans-serif;
-    text-align: justify;
 }
 
 .contact-btn {
@@ -805,7 +763,7 @@ input, textarea {
     font-size: 10px;
     font-family: sans-serif;
     padding: 0 30px;
-    line-height: 80px;
+    line-height: 50px;
     border-radius: 10px;
     border: 2px solid black;
     background: transparent;
@@ -983,8 +941,9 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
 }
 @media screen and (max-width: 1100px) {
     .portfolio-image{
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        margin-top: 25px;
+        width: 250px;
     }
 }
 @media screen and (max-width: 1100px) {
@@ -999,6 +958,8 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
         margin: 10px auto;
         border: 2px solid white;
         overflow: hidden;
+        width: 250px;
+        height: 250px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
     }
 }
@@ -1042,10 +1003,7 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
     }
 }
 @media (max-width: 1100px) {
-    .resume-main {
-        height: auto;
-        width: 100%;
-    }
+
     .resume-sub {
         height: auto;
         flex-direction: column;
@@ -1083,34 +1041,4 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
     }
 }
-@media (max-width: 1100px) {
-    .navbar {
-        height: auto;
-        border: none;
-    }
-
-    .nav-heading {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        padding-top: 5px;
-    }
-    .nav-heading h1 {
-        padding-left: 10px;
-        font-size: 10px;
-    }
-
-    .nav-btn {
-        width: 100%;
-        justify-content: space-evenly;
-        padding: 2px;
-    }
-
-    .large-button {
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 7px;
-        margin: 5px 10%;
-    }
-}
+    

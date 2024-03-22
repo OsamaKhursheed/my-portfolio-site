@@ -37,10 +37,8 @@
             </div>
         </div>
         <div class="portfolio-image">
-            <div class="ok1">
-                <div class="ok">
-                        <img src="landing-pics/ok.webp" alt="Image 1">
-                </div>
+            <div class="ok">
+                    <img src="landing-pics/ok1.png" alt="Image 1">
             </div>
         </div>      
     </div>
@@ -129,7 +127,7 @@
                 <a href="portfolio.html#course-section">See Details</a>
             </div>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center;width: auto; margin-bottom: 100px;">
+        <div style="display: flex; justify-content: center; align-items: center;width: 100%; margin-bottom: 100px;">
             <div class="cert-item" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2><i class="bi bi-mortarboard custom-icon"></i><strong>    FORAGE VIRTUAL INTERNSHIP:</strong></h2>
                 <h4 style="font-size: 14px;">J.P. Morgan - Software Engineering Job Simulation:</h4>
@@ -173,14 +171,24 @@
         backSpeed: 50,
         loop: true
     });
+</script>
 
-    var typedDescription = new Typed(".auto-des", {
-        strings: [
-            "Welcome to my portfolio website! I'm a passionate Python expert with extensive experience working across various frameworks, including Django, Tkinter, and custom tkinter solutions. As a professional coder, I thrive on turning ideas into functional, efficient, and innovative applications. In addition to my Python prowess, I'm a skilled web developer, proficient in HTML, CSS, JavaScript, and Bootstrap, specializing in crafting responsive web applications that deliver exceptional user experiences. Explore my work and discover the intersection of my coding expertise and web development skills."
-        ],
-        typeSpeed: 5,
-        loop: false
-    });
+<script>
+    // Function to check screen size and update paragraph content
+    function updateDescription() {
+        var screenWidth = window.innerWidth;
+        var description = document.querySelector('.auto-des');
+
+        if (screenWidth < 360) {
+            description.textContent = "Welcome! I'm a Python expert with experience in Django, Tkinter, and custom solutions. As a professional coder, I craft efficient applications. I'm also skilled in HTML, CSS, JavaScript, and Bootstrap for responsive web development. Explore my work.";
+        } else {
+            description.textContent = "Welcome to my portfolio! I'm a passionate Python expert with extensive experience in Django, Tkinter, and custom solutions. As a professional coder, I specialize in crafting efficient and innovative applications. Additionally, I excel in HTML, CSS, JavaScript, and Bootstrap for creating responsive web experiences. Explore my work and witness the intersection of coding expertise and web development skills!";
+        }
+    }
+
+    // Call the function initially and on window resize
+    updateDescription();
+    window.addEventListener('resize', updateDescription);
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -195,7 +203,6 @@
         const phoneNumber = "03322151028";
     
         whatsappIcon.addEventListener("click", function() {
-            // Create a temporary input element to copy the phone number
             const tempInput = document.createElement("input");
             tempInput.value = phoneNumber;
             document.body.appendChild(tempInput);
