@@ -5,30 +5,30 @@ body {
 }
 
 h1{
-    font-size: clamp(24px, 2.5vw, 40rem); 
+    font-size: clamp(20px, 2.3vw, 40rem); 
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 
 p{
-    font-size: clamp(18px, 1.3vw, 20rem); 
+    font-size: clamp(14px, 1.1vw, 40rem); 
     font-family: sans-serif;
     text-align: justify;
 }
 
 h3{
-    font-size: clamp(20px, 1.7vw, 25rem); 
+    font-size: clamp(16px, 1.5vw, 40rem); 
     font-family: 'Times New Roman', Times, serif;
 }
 
 h2{
-    font-size: clamp(24px, 2vw, 30rem); 
+    font-size: clamp(20px, 1.7vw, 40rem); 
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
 }
 
 button{
-    font-size: clamp(16px, 1.3vw, 20rem); 
+    font-size: clamp(13px, 1.1vw, 40rem); 
 }
 
 
@@ -56,7 +56,7 @@ button{
     margin: 0;
     padding: 10px;
     padding-bottom: 0px;
-    font-size: clamp(12px, 1.7vw, 20rem); 
+    font-size: clamp(10px, 1.5vw, 40rem); 
 }
 
 .nav-btn {
@@ -74,7 +74,7 @@ button{
     padding: 4px;
     padding-bottom: 0px;
     padding-left: 5px;
-    font-size: clamp(10px, 1.5vw, 20rem); 
+    font-size: clamp(8px, 1.2vw, 40rem); 
     padding-right: 5px;
     border-bottom: 2px solid white;
     border-left: 0px;
@@ -123,16 +123,16 @@ button{
 }
 
 .portfolio-image {
-    height: 300px;
     width: 25%;
+    padding-top: 25%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-bottom: 20px;
     background-image: url('portfolio_pic.webp');
     background-size: cover;
     background-position: center;
     text-align: center;
-    border-radius: 100%;
+    border-radius: 50%;
     border: 5px solid transparent;
     overflow: hidden;
     animation: glow 1s infinite alternate;
@@ -149,21 +149,6 @@ button{
     }
 }
 
-@media (min-width: 1250px){
-    .portfolio-image{
-        height: 400px;
-    }
-}
-@media (min-width: 1800px){
-    .portfolio-image{
-        height: 450px;
-    }
-}
-@media (min-width: 2100px){
-    .portfolio-image{
-        height: 500px;
-    }
-}
 .portfolio-text {
     width: 97%;
     height: auto;
@@ -348,18 +333,18 @@ button{
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     overflow: hidden;
     margin: 0px auto;
-    margin-right: 15px;
+    margin-right: 20px;
     text-align: left;
     justify-content: space-between;
 }
 
 .education-item .custom-icon {
-    font-size: 2rem;
+    font-size: 150%;
     transition: font-size 0.3s;
 }
 .education-item p,h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .edu-but {
@@ -368,7 +353,6 @@ button{
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: clamp(14px, 1.5vw, 25rem); 
     border: 0px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
@@ -426,6 +410,12 @@ button{
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 1800px){.coursera-img{height:350px;width: 400px;}}
+@media (min-width: 2300px){.coursera-img{height:400px;width: 450px;}}
+@media (min-width: 2700px){.coursera-img{height:450px;width: 500px;}}
+@media (min-width: 3300px){.coursera-img{height:500px;width: 550px;}}
+@media (min-width: 3750px){.coursera-img{height:550px;width: 600px;}}
+
 
 .coursera-item {
     display: flex;
@@ -450,7 +440,24 @@ button{
     background-color: white;
     background-position: center;
 }
-
+@media screen and (min-width: 1600px){
+    .c-img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (min-width: 2200px){
+    .c-img{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (min-width: 3000px){
+    .c-img{
+        width: 500px;
+        height: 500px;
+    }
+}
 .c-txt{
     width: 80%;
     height: auto;
@@ -464,7 +471,7 @@ ul{
     text-align: justify;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: clamp(18px, 1.3vw, 20rem); 
+    font-size: clamp(15px, 1.1vw, 20rem); 
     padding-left: 15px;
     font-family: sans-serif;
 }
@@ -487,7 +494,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
 .c-btn:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.7);
@@ -562,7 +569,11 @@ ul{
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
-
+@media (min-width: 1800px){.project-img{height:250px;width: 250px;}}
+@media (min-width: 2300px){.project-img{height:300px;width: 300px;}}
+@media (min-width: 2700px){.project-img{height:350px;width: 350px;}}
+@media (min-width: 3300px){.project-img{height:400px;width: 400px;}}
+@media (min-width: 3750px){.project-img{height:450px;width: 450px;}}
 .project-item{
     width: 100%;
     height: auto;
@@ -577,12 +588,13 @@ ul{
 .project-badge {
     background-color: #0074d9;
     color: white;
-    padding: 7px 25px;
+    padding: 5px 15px;
     border-radius: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     display: inline-block;
     text-align: center;
+    font-size: clamp(12px, 1.1vw, 40rem);
 }
 
 .project-timeline {
@@ -628,13 +640,13 @@ ul{
 }
 
 .resume-img{
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
     margin: auto;
 }
 
 .resume-txt p{
-    padding: 25px;
+    padding: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -716,11 +728,19 @@ ul{
     width: 60%;
     text-align: left;
 }
+
 .contact-txt h1{
     padding: 10px;
 }
+
+.contact-txt h2{
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
 .contact-img{
-    width: 40%;
+    width: auto;
     height: auto;
     margin: 0 auto;
 }
@@ -760,7 +780,7 @@ input, textarea {
     position: absolute;
     width: 95%;
     outline: none;
-    font-size: 10px;
+    font-size: 14px;
     font-family: sans-serif;
     padding: 0 30px;
     line-height: 50px;
@@ -939,6 +959,12 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
         margin-right: 0px;
     }
 }
+@media (min-width: 1800px){.education-item{height:600px;}}
+@media (min-width: 2300px){.education-item{height:700px;}}
+@media (min-width: 2700px){.education-item{height:800px;}}
+@media (min-width: 3300px){.education-item{height:900px;}}
+@media (min-width: 3750px){.education-item{height:800px;}}
+
 @media screen and (max-width: 1100px) {
     .portfolio-image{
         height: 250px;
@@ -971,7 +997,7 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
     .contact-txt {
         width: 100%;
     }
-    .contact-txt h1{
+    .contact-txt h2{
         text-align: center;
     }
     .contact-img {
@@ -984,7 +1010,6 @@ input:focus + .lableline, input:valid + .lableline, textarea:focus + .lableline,
     textarea {
         width: 100%;
         height: 99%;
-        font-size: 10px;
         padding: 0 15px;
         line-height: 40px;
         font-family: sans-serif;
